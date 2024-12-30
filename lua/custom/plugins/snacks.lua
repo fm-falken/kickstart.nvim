@@ -8,6 +8,7 @@ return {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
+      animate = { fps = 60 },
       bigfile = { enabled = true },
       dashboard = { enabled = true },
       indent = { enabled = false },
