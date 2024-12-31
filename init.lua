@@ -143,6 +143,8 @@ vim.opt.expandtab = true
 
 vim.opt.colorcolumn = '90'
 
+vim.opt.termguicolors = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -176,6 +178,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Custom binds
+vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = '[Q]uit All' })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -831,8 +835,8 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     transparent = true,
     styles = {
-      sidebards = "transparent",
-      floats = "transparent",
+      sidebards = 'transparent',
+      floats = 'transparent',
     },
     init = function()
       -- Load the colorscheme here.
@@ -891,7 +895,27 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'json', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'javascript', 'python', 'regex', 'yaml', 'typescript', 'tsx', 'go' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'json',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'javascript',
+        'python',
+        'regex',
+        'yaml',
+        'typescript',
+        'tsx',
+        'go',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
