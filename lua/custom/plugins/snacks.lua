@@ -9,9 +9,9 @@ return {
     -- refer to the configuration section below
     animate = { enabled = true },
     bigfile = { enabled = true },
-    dashboard = { enabled = false },
+    dashboard = { enabled = true },
     explorer = { enabled = false },
-    indent = { enabled = false },
+    indent = { enabled = true },
     input = { enabled = true },
     notifier = { enabled = true },
     picker = { enabled = true },
